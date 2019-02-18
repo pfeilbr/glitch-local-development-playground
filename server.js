@@ -43,7 +43,7 @@ app.get('/deploy', (request, response) => {
 
 //   console.log('Fetching latest changes.')
   const output = execSync(
-    `git merge ${localBranchName} && refresh`
+    `git merge -X theirs ${localBranchName} && refresh`
   ).toString()
   console.log(output);
   response.send({output});
