@@ -18,7 +18,7 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/dbg', (req, resp) => {
+app.get('/dbg', async (req, resp) => {
   resp.send({"body": await rp('https://google.com')});
 })
 
