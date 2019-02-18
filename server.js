@@ -1,8 +1,5 @@
-// server.js
-// where your node app starts
-
-// init project
 const express = require('express');
+const { execSync } = require('child_process')
 const app = express();
 
 const rp = require('request-promise');
@@ -24,6 +21,29 @@ app.get('/dbg', async (req, resp) => {
 
 app.get('/status', (req, resp) => {
   resp.send({"msg": "all good"});
+})
+
+app.post('/deploy', (request, response) => {
+  if (request.query.secret !== process.env.SECRET) {
+    response.status(401).send()
+    return
+  }
+
+  if (request.body.ref !== 'refs/heads/glitch') {
+    response
+      .status(200)
+      .send('Push was not to glitch branch, so did not deploy.')
+    return
+  }
+
+  const repoUrl = request.body.repository.git_url
+
+  console.log('Fetching latest changes.')
+  const output = execSync(
+    `git checkout -- ./ && git pull -X theirs ${repoUrl} glitch && refresh`
+  ).toString()
+  console.log(output)
+  response.status(200).send()
 })
 
 // listen for requests :)
