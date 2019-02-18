@@ -5,7 +5,7 @@
 const express = require('express');
 const app = express();
 
-const r = require('request');
+const rp = require('request-promise');
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -17,6 +17,10 @@ app.use(express.static('public'));
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
+
+app.get('/dbg', (req, resp) => {
+  resp.send({"body": await rp('https://google.com')});
+})
 
 app.get('/status', (req, resp) => {
   resp.send({"msg": "all good"});
