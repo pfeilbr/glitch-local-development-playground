@@ -18,7 +18,7 @@ npm run dev
 
 ## Pushing Changes to Github
 
-There are two remotes, one for glitch and one for github.  Run the following to push to github.
+There are two remotes, one for glitch and one for github.  The branch named `local` contains the most recent up to date changes.  Run the following to push to github.
 
 ```sh
 git push -u github local
