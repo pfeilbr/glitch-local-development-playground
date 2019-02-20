@@ -14,4 +14,4 @@ The default Glitch development experience is to use the browser based editor.  T
 npm run dev
 ```
 
-> You must have the browser based edit view open for live reload to work.
+> You must have the browser based editor view open for live reload to work.
