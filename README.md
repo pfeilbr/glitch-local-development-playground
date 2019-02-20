@@ -8,10 +8,21 @@ The default Glitch development experience is to use the browser based editor.  T
 * [Possible to code locally and push to glitch with git?](https://support.glitch.com/t/possible-to-code-locally-and-push-to-glitch-with-git/2704/3)
 * [Code locally, push to glitch via git?](https://support.glitch.com/t/code-locally-push-to-glitch-via-git/4227/5?u=tim)
 
-### Development (live reload from local changes)
+## Development (live reload from local changes)
 
 ```sh
 npm run dev
 ```
 
 > You must have the browser based editor view open for live reload to work.
+
+## Pushing Changes to Github
+
+There are two remotes, one for glitch and one for github.  Run the following to push to github.
+
+```sh
+git push -u github local
+git push -u github master
+```
+
+> When viewing on github in browser be sure to change branch to `local` to see the latest.
