@@ -20,6 +20,7 @@ app.get("/dbg", async (req, resp) => {
 });
 
 app.get("/env", (req, resp) => {
+  // send contents of .env as object
   resp.send(dotenvResult.parsed);
 });
 
