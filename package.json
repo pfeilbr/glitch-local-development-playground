@@ -11,10 +11,11 @@
     "dev": "nodemon --exec \"git add .; git commit -a -m \\\"local changes\\\"; git push --set-upstream origin local; curl https://glitch-local-development-playground.glitch.me/deploy\" --ignore node_modules/ --watch \"**/*.*\""
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "body-parser": "^1.18.3"
+    "request-promise": "^4.2.4"
   },
   "engines": {
     "node": "8.x"
