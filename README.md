@@ -17,7 +17,7 @@ Get the URL + User Name.  The User Name acts as the username+password.  It is a 
 **Example (this doesn't work.  username changed)**
 
 ```sh
-git clone https://a63dde92-f3db-411b-a4cf-e2834ed707e4@api.glitch.com/git/app01
+git clone https://a63dde92-f3db-411b-a4cf-e2834ed707e4@api.glitch.com/git/glitch-local-development-playground
 ```
 
 ![](https://www.evernote.com/l/AAGIRoW8xEpJrrMq7J8uOiLFDgAjdZBhwJAB/image.png)
