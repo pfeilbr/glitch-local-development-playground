@@ -4,7 +4,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 const rp = require("request-promise");
 const app = express();
-const dotenv = require("dotenv");
+require("dotenv").config();
 
 const localBranchName = "local";
 
