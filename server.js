@@ -4,7 +4,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 const rp = require("request-promise");
 const app = express();
-require("dotenv").config();
+const dotenvResult = require("dotenv").config();
 
 const localBranchName = "local";
 
@@ -17,6 +17,10 @@ app.get("/", function(request, response) {
 
 app.get("/dbg", async (req, resp) => {
   resp.send({ body: await rp("https://google.com") });
+});
+
+app.get("/.env", (req, resp) => {
+  resp.send({ dotenvResult.parsed });
 });
 
 app.get("/status", (req, resp) => {
