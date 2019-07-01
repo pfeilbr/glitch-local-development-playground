@@ -20,7 +20,7 @@ app.get("/dbg", async (req, resp) => {
 });
 
 app.get("/.env", (req, resp) => {
-  resp.send({ dotenvResult.parsed });
+  resp.send(dotenvResult.parsed);
 });
 
 app.get("/status", (req, resp) => {
