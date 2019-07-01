@@ -14,7 +14,7 @@ The default Glitch development experience is to use the browser based editor.  T
 * Get the URL + User Name.  The User Name acts as the username+password.  It is a GUID.  e.g. `a63dde92-f3db-411b-a4cf-e2834ed707e4`
 * Clone glitch repo locally
 
-**Example (this doesn't work.  username changed)**
+**Example Clone (this doesn't work.  username changed)**
 
 ```sh
 git clone https://a63dde92-f3db-411b-a4cf-e2834ed707e4@api.glitch.com/git/glitch-local-development-playground
