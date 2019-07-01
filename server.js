@@ -19,7 +19,7 @@ app.get("/dbg", async (req, resp) => {
   resp.send({ body: await rp("https://google.com") });
 });
 
-app.get("/.env", (req, resp) => {
+app.get("/env", (req, resp) => {
   resp.send(dotenvResult.parsed);
 });
 
